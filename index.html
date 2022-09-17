@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="JeromeJoh,jerome.yzhao@foxmail.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Tasks</title>
+
+  <link rel="dns-prefetch" href="">
+
+  <link type="image/x-ico" rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- S 导航栏 -->
+  <header role="banner">
+    <div class="logo">
+      <div class="circle"></div>
+      <div class="rectangle"></div>
+      <p>Full Screen for Google Tasks</p>
+    </div>
+    <nav>
+      <div class="search">
+        <img src="images/search.svg">
+        <input type="search" placeholder="Search">
+      </div>
+      <button class="add-to-taskbar" onclick="alert('安装 Google Tasks Desktop 应用')">
+        <img src="images/download.svg">
+        Add to Taskbar
+      </button>
+      <button class="setting">
+        <img src="images/setting.svg">
+      </button>
+    </nav>
+  </header>
+  <!-- E 导航栏 -->
+
+  <!-- S 内容区 -->
+  <main role="main">
+    <section class="left-section">
+      <div id="newList">
+        <button>
+          <p>Lists</p>
+          <span class="plus"></span>
+        </button>
+      </div>
+      <div id="popUp"></div>
+      <div id="listDisplay"></div>
+    </section>
+    <!-- 左侧任务列表区 -->
+
+    <section class="middle-section">
+      <div class="list-info">
+        <p></p> 
+        <button><img src="images/more.svg"></button>
+      </div>
+
+      <div id="todoList"></div>
+      <button id="new-task" onclick="addTask()"><span class="plus"></span></button>
+    </section>
+    <!-- 中间任务项区 -->
+
+    <section class="right-section">
+      <div class="detail">
+        <input id="titleInput" type="text">
+        <input id="dateInput" type="date">
+      </div>
+      <div class="timestamp""><span>2020-08-20</span></div>
+      <div class="remark">
+        <img src="images/text.svg">
+        <textarea id="taskDetail" placeholder="add details"></textarea>
+      </div>
+    </section>
+    <!-- 右侧任务信息区 -->
+  </main>
+  <!-- E 内容区 -->
+</body>
+
+</html>
